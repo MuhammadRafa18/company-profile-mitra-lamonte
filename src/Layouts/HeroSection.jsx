@@ -10,7 +10,7 @@ export const HeroSection = () => {
       <div
         className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 
                   py-16 sm:py-20 lg:py-28 
-                  grid lg:grid-cols-2 gap-12 items-center"
+                  grid lg:lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center"
       >
         {/* LEFT CONTENT */}
         <motion.div
@@ -23,7 +23,7 @@ export const HeroSection = () => {
           <div
             className="inline-flex items-center gap-2 
                       text-xs font-semibold tracking-wide 
-                      bg-[#F4E04D]/30 text-[#1A3C04]
+                      bg-gray-100 text-gray-700
                       px-4 py-1.5 rounded-full mb-6"
           >
             Jalur Distribusi 2026
@@ -36,13 +36,13 @@ export const HeroSection = () => {
                      leading-tight"
           >
             Bangun Brand Baju Anakmu
-            <span className="block text-[#4A6718]">
+            <span className="">
               Tanpa Produksi & Gudang
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
+          <p className="mt-6  font-medium text-base sm:text-lg text-gray-600 leading-relaxed">
             Sistem distribusi siap pakai untuk kamu yang ingin fokus jualan dan
             branding tanpa ribet operasional.
           </p>
@@ -50,21 +50,12 @@ export const HeroSection = () => {
           {/* CTA */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <button
-              className="bg-[#F4E04D] text-[#1A3C04] 
-                           font-semibold px-6 py-3 rounded-full 
-                           shadow-md hover:shadow-lg 
+              className="bg-[#1A3C04] text-white
+                           px-6 py-3 rounded-full font-medium cursor-pointer  
+                           hover:bg-[#142F03] hover:text-white
                            transition-all duration-300"
             >
               Lihat Paket dan Bonus
-            </button>
-
-            <button
-              className="border-2 border-[#1A3C04] text-[#1A3C04]
-                           px-6 py-3 rounded-full font-medium
-                           hover:bg-[#1A3C04] hover:text-white
-                           transition-all duration-300"
-            >
-              Nonton Dulu Strateginya
             </button>
           </div>
 
@@ -78,7 +69,7 @@ export const HeroSection = () => {
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-2">
                 <svg
-                  className="w-4 h-4 text-[#4A6718] mt-[2px] flex-shrink-0"
+                  className="w-4 h-4 text-gray-500 mt-[2px] flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -104,8 +95,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          {/* glow background */}
-          <div className="absolute -inset-6 bg-[#F4E04D]/20 blur-3xl rounded-3xl -z-10" />
+        
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <img
@@ -118,7 +108,7 @@ export const HeroSection = () => {
           {/* floating card */}
           <div
             className="hidden sm:block absolute -bottom-6 -left-6 
-                      bg-white shadow-lg rounded-2xl px-6 py-4"
+                      bg-white shadow-lg border border-gray-100 rounded-xl px-6 py-4"
           >
             <p className="text-sm text-gray-500">Produk Siap Kirim</p>
             <p className="text-lg font-bold text-[#1A3C04]">

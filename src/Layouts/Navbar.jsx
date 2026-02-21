@@ -24,22 +24,22 @@ export const Navbar = () => {
     <>
       <div
         className={`sticky top-0 z-50 w-full transition-all duration-300
-        ${scrolled ? "bg-white/80 backdrop-blur-md shadow-sm transition-colors duration-300 ease-in-out" : "bg-white border-b-2 border-b-[#F4E04D]"}
+        ${scrolled ? "bg-white/80 backdrop-blur-md shadow-sm transition-colors duration-300 ease-in-out" : "bg-white border-b-2 border-b-olive-100"}
       `}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-5 flex items-center justify-between">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-3 lg:py-4 flex items-center justify-between">
           {/* <!-- LOGO --> */}
-          <div className="flex items-center ">
+          <div className="flex items-center gap-3">
             <img
               src="https://lamonte.id/_ipx/f_webp&s_416x128/https://storage.googleapis.com/ama-ecommerce/lmi/2024/12/27/0-3-900x270.webp"
               alt=""
               className="w-28 sm:w-32 lg:w-40"
             />
             <div class="hidden sm:flex flex-col">
-              <span class="text-xs font-black uppercase tracking-widest text-[#4A6718] leading-normal">
+              <span class="text-xs font-black uppercase tracking-widest text-gray-700 leading-normal">
                 Distributor
               </span>
-              <span class="text-[10px] text-white bg-[#4A6718]  px-1 rounded font-bold inline-block w-max">
+              <span class="text-[10px] text-olive-100 bg-[#4A6718]  px-1 rounded font-bold inline-block w-max">
                 Official Access
               </span>
             </div>
@@ -49,11 +49,11 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="text-[#1A3C04]
+                className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
                 after:h-[2px] after:w-0
-                after:bg-[#1A3C04]
+                after:bg-[#4A6718]/70
                 after:transition-all after:duration-300
                 hover:after:w-full"
               >
@@ -63,11 +63,11 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="text-[#1A3C04]
+                className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
                 after:h-[2px] after:w-0
-                after:bg-[#1A3C04]
+                after:bg-[#4A6718]/70
                 after:transition-all after:duration-300
                 hover:after:w-full"
               >
@@ -77,11 +77,11 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="text-[#1A3C04]
+                className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
                 after:h-[2px] after:w-0
-                after:bg-[#1A3C04]
+                after:bg-[#4A6718]/70
                 after:transition-all after:duration-300
                 hover:after:w-full"
               >
@@ -91,11 +91,11 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="text-[#1A3C04]
+                className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
                 after:h-[2px] after:w-0
-                after:bg-[#1A3C04]
+                after:bg-[#4A6718]/70
                 after:transition-all after:duration-300
                 hover:after:w-full"
               >
@@ -105,11 +105,11 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="text-[#1A3C04]
+                className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
                 after:h-[2px] after:w-0
-                after:bg-[#1A3C04]
+                after:bg-[#4A6718]/70
                 after:transition-all after:duration-300
                 hover:after:w-full"
               >
@@ -124,7 +124,8 @@ export const Navbar = () => {
             <div
               className="hidden lg:flex items-center gap-6  px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 
             text-xs  rounded-full bg-[#F4E04D] hover:cursor-pointer
-            border-2 border-[#4A6718]  font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+            font-semibold shadow-lg  duration-300 transition-transform
+            hover:scale-[1.02] active:scale-[0.98]"
             >
               <a href="#" className="text-[#1A3C04] ">
                 JADI MITRA SEKARANG
@@ -183,8 +184,8 @@ export const Navbar = () => {
                     key={item.id}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block text-base font-medium text-[#1A3C04]
-                    hover:text-[#4A6718] transition-colors"
+                    className="block text-base font-medium text-gray-700
+                    hover:text-olive-100 transition-colors"
                   >
                     {item.name}
                   </a>
