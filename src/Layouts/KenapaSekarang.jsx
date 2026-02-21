@@ -3,7 +3,7 @@ import React from "react";
 export const KenapaSekarang = () => {
   return (
     <>
-      <section class="relative py-24 bg-[#F8FAF7] overflow-hidden">
+      <section id="kenapa-sekarang" class="relative py-24 bg-[#F8FAF7] overflow-hidden">
         {/* subtle background blur */}
         <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
           <div class="w-full h-full bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:40px_40px]"></div>
@@ -126,7 +126,7 @@ export const KenapaSekarang = () => {
 
               <div class="mt-10">
                 <a
-                  href="#"
+                  href="#paket-kemitraan"
                   class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-yellow-400 hover:bg-yellow-500 transition font-semibold text-gray-900 shadow-md"
                 >
                   Lanjut Pilih Paket →

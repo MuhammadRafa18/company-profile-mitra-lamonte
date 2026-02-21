@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
+import { redirectToWhatsApp } from "./Redirec";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const menuItems = [
-    { id: 1, name: "Program", href: "#program" },
-    { id: 2, name: "Vidio", href: "#vidio" },
-    { id: 3, name: "Paket", href: "#paket" },
+    { id: 1, name: "Program", href: "#hero-section" },
+    { id: 2, name: "Dokumentasi", href: "#dokumentasi" },
+    { id: 3, name: "Paket", href: "#paket-kemitraan" },
     { id: 4, name: "Testimoni", href: "#testimoni" },
     { id: 5, name: "Faq", href: "#faq" },
   ];
@@ -30,11 +31,13 @@ export const Navbar = () => {
         <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-3 lg:py-4 flex items-center justify-between">
           {/* <!-- LOGO --> */}
           <div className="flex items-center gap-3">
-            <img
-              src="https://lamonte.id/_ipx/f_webp&s_416x128/https://storage.googleapis.com/ama-ecommerce/lmi/2024/12/27/0-3-900x270.webp"
-              alt=""
-              className="w-28 sm:w-32 lg:w-40"
-            />
+            <a href="#hero-section">
+              <img
+                src="https://lamonte.id/_ipx/f_webp&s_416x128/https://storage.googleapis.com/ama-ecommerce/lmi/2024/12/27/0-3-900x270.webp"
+                alt=""
+                className="w-28 sm:w-32 lg:w-40"
+              />
+            </a>
             <div class="hidden sm:flex flex-col">
               <span class="text-xs font-black uppercase tracking-widest text-gray-700 leading-normal">
                 Distributor
@@ -47,8 +50,8 @@ export const Navbar = () => {
           {/* Menu */}
           <ul className="hidden lg:flex items-center gap-6 lg:gap-10 text-sm font-medium tracking-wide">
             <li>
-              <Link
-                href="#"
+              <a
+                href="#hero-section"
                 className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
@@ -58,11 +61,11 @@ export const Navbar = () => {
                 hover:after:w-full"
               >
                 Program
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="#"
+              <a
+                href="#dokumentasi"
                 className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
@@ -71,12 +74,12 @@ export const Navbar = () => {
                 after:transition-all after:duration-300
                 hover:after:w-full"
               >
-                Vidio
-              </Link>
+                Dokumentasi
+              </a>
             </li>
             <li>
-              <Link
-                href="#"
+              <a
+                href="#paket-kemitraan"
                 className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
@@ -86,11 +89,11 @@ export const Navbar = () => {
                 hover:after:w-full"
               >
                 Paket
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="#"
+              <a
+                href="#testimoni"
                 className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
@@ -100,11 +103,11 @@ export const Navbar = () => {
                 hover:after:w-full"
               >
                 Testimoni
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="#"
+              <a
+                href="#faq"
                 className="text-gray-700 hover:text-[#4A6718]
                 relative
                 after:absolute after:-bottom-1 after:left-0
@@ -114,7 +117,7 @@ export const Navbar = () => {
                 hover:after:w-full"
               >
                 Faq
-              </Link>
+              </a>
             </li>
             <li></li>
           </ul>
@@ -127,9 +130,17 @@ export const Navbar = () => {
             font-semibold shadow-lg  duration-300 transition-transform
             hover:scale-[1.02] active:scale-[0.98]"
             >
-              <a href="#" className="text-[#1A3C04] ">
+              <button
+                onClick={() =>
+                  redirectToWhatsApp({
+                    phone: "628111189921",
+                    type: "mitra",
+                  })
+                }
+                className="text-[#1A3C04] "
+              >
                 JADI MITRA SEKARANG
-              </a>
+              </button>
             </div>
             {/* Button Menu */}
             <button
@@ -192,13 +203,18 @@ export const Navbar = () => {
                 ))}
 
                 <div className="pt-4">
-                  <a
-                    href="#"
-                    className="block text-center bg-[#F4E04D] text-[#1A3C04]
+                  <button
+                    onClick={() =>
+                      redirectToWhatsApp({
+                        phone: "628111189921",
+                        type: "mitra",
+                      })
+                    }
+                    className="w-full text-center bg-[#F4E04D] text-[#1A3C04]
                   font-semibold py-3 rounded-full shadow-md"
                   >
                     Jadi Mitra Sekarang
-                  </a>
+                  </button>
                 </div>
               </div>
             </motion.div>

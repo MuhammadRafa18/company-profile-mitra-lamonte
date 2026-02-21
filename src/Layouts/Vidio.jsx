@@ -3,7 +3,7 @@ import React from "react";
 export const Vidio = () => {
   return (
     <>
-      <div className="relative font-sans py-28 px-6 lg:px-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      <div id="dokumentasi" className="relative font-sans py-28 px-6 lg:px-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
         {/* subtle background accent */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#1A3C04]/5 rounded-full blur-3xl"></div>
 

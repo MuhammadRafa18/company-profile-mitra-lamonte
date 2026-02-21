@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import hero from "../assets/hero.png";
+import { useNavigate } from "react-router";
 export const HeroSection = () => {
+  const navigate = useNavigate();
   return (
-    <section className="relative overflow-hidden font-sans">
+    <section id="hero-section" className="relative overflow-hidden font-sans">
       {/* subtle background gradient */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white via-white to-[#f6fbe9]" />
 
@@ -49,14 +51,14 @@ export const HeroSection = () => {
 
           {/* CTA */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <button
+            <a href="#paket-kemitraan" 
               className="bg-[#1A3C04] text-white
                            px-6 py-3 rounded-full font-medium cursor-pointer  
                            hover:bg-[#142F03] hover:text-white
                            transition-all duration-300"
             >
               Lihat Paket dan Bonus
-            </button>
+            </a>
           </div>
 
           {/* Small trust line */}

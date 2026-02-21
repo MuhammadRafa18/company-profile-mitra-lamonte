@@ -49,7 +49,7 @@ export const Testimoni = () => {
   ];
   return (
     <>
-      <div className="py-28 px-6 lg:px-16 bg-gray-50">
+      <div id="testimoni" className="py-28 px-6 lg:px-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="max-w-2xl mb-16">

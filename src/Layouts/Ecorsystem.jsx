@@ -1,9 +1,10 @@
 import React from "react";
+import { redirectToWhatsApp } from "./Redirec";
 
 export const Ecorsystem = () => {
   return (
     <>
-      <section class="relative py-24 bg-[#F8FAF7]">
+      <section id="ecorsystem" class="relative py-24 bg-[#F8FAF7]">
         <div class="max-w-6xl mx-auto px-6">
           {/* <!-- Header --> */}
           <div class="text-center max-w-2xl mx-auto mb-16">
@@ -32,13 +33,22 @@ export const Ecorsystem = () => {
                 {/* icon */}
                 <div class="relative w-16 h-16 flex items-center justify-center rounded-2xl bg-gradient-to-br from-blue-100 to-blue-50 shadow-inner mb-6">
                   <svg
-                    class="w-7 h-7 text-blue-700"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M9 17v-6a2 2 0 012-2h4" />
+                    <g
+                      fill="none"
+                      stroke="#2563EB"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path d="M13.5 8h-3M15 2l-1 2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3" />
+                      <path d="M16.899 22A5 5 0 0 0 7.1 22M9 2l3 6" />
+                      <circle cx="12" cy="15" r="3" />
+                    </g>
                   </svg>
                 </div>
                 <span class="inline-block text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
@@ -79,13 +89,15 @@ export const Ecorsystem = () => {
                 {/* icon */}
                 <div class="relative w-16 h-16 flex items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-green-50 shadow-inner mb-6">
                   <svg
-                    class="w-7 h-7 text-green-700"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M9 17v-6a2 2 0 012-2h4" />
+                    <path
+                      fill="#16A34A"
+                      d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 2v4h10V4zm0 6v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"
+                    />
                   </svg>
                 </div>
                 <span class="inline-block text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full mb-4">
@@ -125,13 +137,16 @@ export const Ecorsystem = () => {
                 {/* icon */}
                 <div class="relative w-16 h-16 flex items-center justify-center rounded-2xl bg-gradient-to-br from-pink-100 to-pink-50 shadow-inner mb-6">
                   <svg
-                    class="w-6 h-6 text-pink-600"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M4 7h16M4 12h16M4 17h16" />
+                    <circle cx="12" cy="12" r="3.2" fill="#DB2777" />
+                    <path
+                      fill="#DB2777"
+                      d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5"
+                    />
                   </svg>
                 </div>
                 <span class="inline-block text-xs font-semibold text-pink-600 bg-pink-50 px-3 py-1 rounded-full mb-4">
@@ -165,12 +180,17 @@ export const Ecorsystem = () => {
 
           {/* <!-- Bottom CTA --> */}
           <div class="mt-10 text-center">
-            <a
-              href="#"
+            <button
+              onClick={() =>
+                  redirectToWhatsApp({
+                    phone: "628111189921",
+                    type: "cek_wilayah",
+                  })
+                }
               class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-yellow-400 hover:bg-yellow-500 transition font-semibold text-gray-900  shadow-[0_10px_30px_rgba(26,60,4,0.25)] hover:shadow-[0_15px_40px_rgba(26,60,4,0.35)] hover:-translate-y-1"
             >
               Cek Slot Wilayah
-            </a>
+            </button>
           </div>
         </div>
       </section>
