@@ -179,7 +179,7 @@ export const Ecorsystem = () => {
           </div>
 
           {/* <!-- Bottom CTA --> */}
-          <div class="mt-10 text-center">
+          <div class="mt-10 text-center cursor-pointer">
             <button
               onClick={() =>
                   redirectToWhatsApp({
