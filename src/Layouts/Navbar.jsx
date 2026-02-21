@@ -137,7 +137,7 @@ export const Navbar = () => {
                     type: "mitra",
                   })
                 }
-                className="text-[#1A3C04] "
+                className="text-[#1A3C04]  hover:cursor-pointer"
               >
                 JADI MITRA SEKARANG
               </button>
