@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import hero from "../assets/hero.png";
 export const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden font-sans">
       {/* subtle background gradient */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white via-white to-[#f6fbe9]" />
 

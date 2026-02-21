@@ -23,7 +23,7 @@ export const Navbar = () => {
   return (
     <>
       <div
-        className={`sticky top-0 z-50 w-full transition-all duration-300
+        className={`sticky top-0 z-50 w-full transition-all duration-300 font-sans
         ${scrolled ? "bg-white/80 backdrop-blur-md shadow-sm transition-colors duration-300 ease-in-out" : "bg-white border-b-2 border-b-olive-100"}
       `}
       >
