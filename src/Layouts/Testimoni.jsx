@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import testimoni1 from "../assets/testimoni1.jpg";
 import testimoni2 from "../assets/testimoni2.jpg";
 import testimoni3 from "../assets/testimoni3.jpg";
 import testimoni4 from "../assets/testimoni4.jpg";
 import testimoni5 from "../assets/testimoni5.jpg";
 import testimoni6 from "../assets/testimoni6.jpg";
+import testimoni7 from "../assets/testimoni7.jpg";
+import testimoni8 from "../assets/testimoni8.jpg";
+import testimoni9 from "../assets/testimoni9.jpg";
+import testimoni10 from "../assets/testimoni10.jpg";
+import testimoni11 from "../assets/testimoni11.jpg";
+import testimoni12 from "../assets/testimoni12.jpg";
+import testimoni13 from "../assets/testimoni13.jpg";
+import testimoni14 from "../assets/testimoni14.jpg";
+import testimoni15 from "../assets/testimoni15.jpg";
+import testimoni16 from "../assets/testimoni16.jpg";
+import testimoni17 from "../assets/testimoni17.jpg";
+import testimoni18 from "../assets/testimoni18.jpg";
 
 export const Testimoni = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -46,10 +58,90 @@ export const Testimoni = () => {
       phase: "Distribusi Aktif",
       growth: "+44% volume",
     },
+
+    {
+      image: testimoni7,
+      title: "Mitra Semarang",
+      phase: "Bulan ke-3",
+      growth: "+35% transaksi",
+    },
+    {
+      image: testimoni8,
+      title: "Mitra Palembang",
+      phase: "Repeat Order",
+      growth: "+46% volume",
+    },
+    {
+      image: testimoni9,
+      title: "Mitra Samarinda",
+      phase: "Distribusi Aktif",
+      growth: "+42% volume",
+    },
+    {
+      image: testimoni10,
+      title: "Mitra Batam",
+      phase: "Bulan ke-4",
+      growth: "+38% transaksi",
+    },
+    {
+      image: testimoni11,
+      title: "Mitra Pekanbaru",
+      phase: "Repeat Order",
+      growth: "+50% peningkatan",
+    },
+    {
+      image: testimoni12,
+      title: "Mitra Yogyakarta",
+      phase: "Distribusi Aktif",
+      growth: "+43% volume",
+    },
+
+    {
+      image: testimoni13,
+      title: "Mitra Banjarmasin",
+      phase: "Bulan ke-2",
+      growth: "+36% transaksi",
+    },
+    {
+      image: testimoni14,
+      title: "Mitra Manado",
+      phase: "Repeat Order",
+      growth: "+49% volume",
+    },
+    {
+      image: testimoni15,
+      title: "Mitra Kupang",
+      phase: "Distribusi Aktif",
+      growth: "+40% volume",
+    },
+    {
+      image: testimoni16,
+      title: "Mitra Tasikmalaya",
+      phase: "Bulan ke-6",
+      growth: "+45% peningkatan",
+    },
+    {
+      image: testimoni17,
+      title: "Mitra Cirebon",
+      phase: "Repeat Order",
+      growth: "+47% volume",
+    },
+    {
+      image: testimoni18,
+      title: "Mitra Malang",
+      phase: "Distribusi Aktif",
+      growth: "+51% transaksi",
+    },
   ];
+  const sectionRef = useRef(null);
+
   return (
     <>
-      <div id="testimoni" className="py-28 px-6 lg:px-16 bg-gray-50">
+      <div
+        id="testimoni"
+        ref={sectionRef}
+        className="py-28 px-6 lg:px-16 bg-gray-50"
+      >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="max-w-2xl mb-16">
@@ -123,7 +215,22 @@ export const Testimoni = () => {
           {/* CTA */}
           <div className="mt-4 text-center">
             <button
-              onClick={() => setShowAll((prev) => !prev)}
+              onClick={() => {
+                setShowAll((prev) => {
+                  const next = !prev;
+
+                  if (prev === true) {
+                    setTimeout(() => {
+                      sectionRef.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }, 100);
+                  }
+
+                  return next;
+                });
+              }}
               className={`
                     relative px-8 py-4 rounded-full font-medium cursor-pointer
                     transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
