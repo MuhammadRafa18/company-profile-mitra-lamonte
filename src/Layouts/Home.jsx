@@ -7,15 +7,17 @@ import { KenapaSekarang } from './KenapaSekarang'
 import { Katalog } from './Katalog'
 import { Faq } from './Faq'
 import { PaketKemitraan } from './PaketKemitraan'
+import { StickyCTA } from './StickyCTA'
 
 export const Home = () => {
   return (
     <>
     <HeroSection/>
+    <KenapaSekarang/>
+    <Ecorsystem/>
+    <StickyCTA/>
     <Vidio/>
     <Testimoni/>
-    <Ecorsystem/>
-    <KenapaSekarang/>
     <PaketKemitraan/>
     <Katalog/>
     <Faq/>

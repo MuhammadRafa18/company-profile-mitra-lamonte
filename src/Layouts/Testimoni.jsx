@@ -18,9 +18,12 @@ import testimoni16 from "../assets/testimoni16.jpg";
 import testimoni17 from "../assets/testimoni17.jpg";
 import testimoni18 from "../assets/testimoni18.jpg";
 
+
+
 export const Testimoni = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [showAll, setShowAll] = useState(false);
+  const sectionRef = useRef(null);
+
   const mitraData = [
     {
       image: testimoni1,
@@ -48,212 +51,126 @@ export const Testimoni = () => {
     },
     {
       image: testimoni5,
-      title: "Mitra Pontianak",
-      phase: "Bulan ke-5",
-      growth: "+39% volume",
+      title: "Mitra Yogyakarta",
+      phase: "Bulan Ke-4",
+      growth: "+34% volume",
     },
     {
       image: testimoni6,
-      title: "Mitra Bali",
+      title: "Mitra Pontianak",
       phase: "Distribusi Aktif",
-      growth: "+44% volume",
+      growth: "+55% volume",
     },
-
     {
       image: testimoni7,
-      title: "Mitra Semarang",
-      phase: "Bulan ke-3",
-      growth: "+35% transaksi",
+      title: "Mitra Bali",
+      phase: "Repeat Order",
+      growth: "+29% volume",
     },
     {
       image: testimoni8,
-      title: "Mitra Palembang",
+      title: "Mitra Palu",
       phase: "Repeat Order",
-      growth: "+46% volume",
+      growth: "+26% volume",
     },
     {
       image: testimoni9,
-      title: "Mitra Samarinda",
-      phase: "Distribusi Aktif",
-      growth: "+42% volume",
+      title: "Mitra Batam",
+      phase: "Bulan Ke-6",
+      growth: "+30% volume",
     },
     {
       image: testimoni10,
-      title: "Mitra Batam",
-      phase: "Bulan ke-4",
-      growth: "+38% transaksi",
-    },
-    {
-      image: testimoni11,
-      title: "Mitra Pekanbaru",
-      phase: "Repeat Order",
-      growth: "+50% peningkatan",
-    },
-    {
-      image: testimoni12,
-      title: "Mitra Yogyakarta",
+      title: "Mitra Tanggerang",
       phase: "Distribusi Aktif",
-      growth: "+43% volume",
+      growth: "+28% volume",
     },
 
-    {
-      image: testimoni13,
-      title: "Mitra Banjarmasin",
-      phase: "Bulan ke-2",
-      growth: "+36% transaksi",
-    },
-    {
-      image: testimoni14,
-      title: "Mitra Manado",
-      phase: "Repeat Order",
-      growth: "+49% volume",
-    },
-    {
-      image: testimoni15,
-      title: "Mitra Kupang",
-      phase: "Distribusi Aktif",
-      growth: "+40% volume",
-    },
-    {
-      image: testimoni16,
-      title: "Mitra Tasikmalaya",
-      phase: "Bulan ke-6",
-      growth: "+45% peningkatan",
-    },
-    {
-      image: testimoni17,
-      title: "Mitra Cirebon",
-      phase: "Repeat Order",
-      growth: "+47% volume",
-    },
-    {
-      image: testimoni18,
-      title: "Mitra Malang",
-      phase: "Distribusi Aktif",
-      growth: "+51% transaksi",
-    },
   ];
-  const sectionRef = useRef(null);
 
   return (
-    <>
-      <div
-        id="testimoni"
-        ref={sectionRef}
-        className="py-28 px-6 lg:px-16 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="max-w-2xl mb-16">
-            <span className="text-xs font-semibold tracking-[0.25em] text-[#1A3C04] uppercase">
-              Dokumentasi Mitra
-            </span>
+    <section
+      id="testimoni"
+      ref={sectionRef}
+      className="relative py-14 md:py-20 bg-gradient-to-b from-amber-50 via-white to-white overflow-hidden"
+    >
+      {/* Background Accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-30" />
 
-            <h2 className="mt-4 text-3xl lg:text-5xl font-semibold text-gray-900 leading-tight">
-              Aktivitas dan Transaksi Mitra Aktif
-            </h2>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-14">
+          <span className="inline-block px-4 py-2 text-[11px] font-semibold rounded-full mb-4 text-amber-700 bg-amber-100">
+            TESTIMONI MITRA
+          </span>
 
-            <p className="mt-4 text-gray-600 text-lg leading-relaxed">
-              Beberapa dokumentasi nyata dari mitra yang telah menjalankan
-              sistem distribusi secara konsisten.
-            </p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3">
+            Bisnisnya Sudah Jalan. Bukan Baru Mulai.
+          </h2>
 
-            <div className="mt-6 w-12 h-[2px] bg-[#1A3C04]"></div>
-          </div>
-
-          {/* Grid */}
-          <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 ease-in-out`}
-          >
-            {mitraData.map((item, i) => {
-              const visible = showAll || i < 3;
-
-              return (
-                <div
-                  key={i}
-                  onClick={() => visible && setSelectedImage(item.image)}
-                  className={`
-                    group cursor-pointer bg-white rounded-3xl overflow-hidden border border-gray-100
-                    transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-                    ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none h-0 overflow-hidden"}
-                `}
-                >
-                  {/* Image */}
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full aspect-[4/5] object-cover transition duration-700 group-hover:scale-105"
-                    />
-
-                    {/* Growth Badge */}
-                    <div className="absolute top-4 right-4 bg-[#1A3C04] text-white text-xs px-3 py-1 rounded-full shadow">
-                      {item.growth}
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-1 text-sm text-gray-500">{item.phase}</p>
-
-                    <div className="mt-4 h-[1px] bg-gray-100"></div>
-
-                    <p className="mt-4 text-sm text-gray-600">
-                      Aktivitas distribusi berjalan stabil dan menunjukkan
-                      pertumbuhan konsisten.
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-4 text-center">
-            <button
-              onClick={() => {
-                setShowAll((prev) => {
-                  const next = !prev;
-
-                  if (prev === true) {
-                    setTimeout(() => {
-                      sectionRef.current?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }, 100);
-                  }
-
-                  return next;
-                });
-              }}
-              className={`
-                    relative px-8 py-4 rounded-full font-medium cursor-pointer
-                    transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-                    ${
-                      showAll
-                        ? "bg-[#1A3C04] text-white shadow-lg hover:shadow-xl hover:-translate-y-1"
-                        : "bg-[#1A3C04] text-white shadow-[0_10px_30px_rgba(26,60,4,0.25)] hover:shadow-[0_15px_40px_rgba(26,60,4,0.35)] hover:-translate-y-1"
-                    }
-                `}
-            >
-              {showAll
-                ? "Tampilkan Lebih Sedikit"
-                : "Lihat Lebih Banyak Dokumentasi"}
-            </button>
-          </div>
+          <p className="text-gray-600 text-sm md:text-base max-w-md mx-auto leading-relaxed">
+            Transaksi berjalan, repeat order terjadi, distribusi aktif di berbagai kota.
+          </p>
         </div>
+
+        {/* Slider */}
+        <div
+          className="flex gap-4 md:gap-6 overflow-x-auto pb-4
+          snap-x snap-mandatory scroll-smooth
+          [-ms-overflow-style:none] [scrollbar-width:none]
+          [&::-webkit-scrollbar]:hidden"
+        >
+          {mitraData.map((item, i) => (
+            <div
+              key={i}
+              onClick={() => setSelectedImage(item.image)}
+              className="snap-start shrink-0 cursor-pointer
+              w-[65%] sm:w-[50%] md:w-[40%] lg:w-[312px]
+
+              bg-white rounded-3xl overflow-hidden
+              border border-amber-100
+              shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:shadow-[0_20px_40px_rgba(0,0,0,0.10)]"
+            >
+              {/* Image */}
+              <div className="relative">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full aspect-[4/5] object-cover"
+                />
+
+                <div className="absolute top-4 right-4 bg-amber-400 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                  {item.growth}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-5">
+                <h3 className="text-sm font-semibold text-gray-900">
+                  {item.title}
+                </h3>
+
+                <p className="text-xs text-gray-500 mt-1">
+                  {item.phase}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Modal Preview */}
         {selectedImage && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/0 backdrop-blur-0 animate-fadeIn"
+            className="fixed inset-0 z-50 flex items-center justify-center 
+            bg-black/40 backdrop-blur-sm animate-fadeIn"
             onClick={() => setSelectedImage(null)}
           >
             <div
-              className="relative flex items-center justify-center"
+              className="relative"
               onClick={(e) => e.stopPropagation()}
             >
               <img
@@ -262,21 +179,20 @@ export const Testimoni = () => {
                 className="max-h-[85vh] w-auto mx-auto rounded-2xl shadow-2xl"
               />
 
-              {/* Close Button */}
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 text-white text-sm tracking-widest uppercase cursor-pointer"
+                className="absolute -top-10 right-0 text-white cursor-pointer"
               >
                 <svg
-                  className="w-12 h-12"
+                  className="w-10 h-10"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
                   <path
                     fill="none"
-                    stroke="#ffff"
-                    stroke-linecap="round"
-                    stroke-width="1.5"
+                    stroke="white"
+                    strokeLinecap="round"
+                    strokeWidth="1.5"
                     d="m8.464 15.535l7.072-7.07m-7.072 0l7.072 7.07"
                   />
                 </svg>
@@ -285,6 +201,6 @@ export const Testimoni = () => {
           </div>
         )}
       </div>
-    </>
+    </section>
   );
 };

@@ -6,22 +6,23 @@ export const Faq = () => {
   const [open, setOpen] = useState(null);
 
   const faqs = [
-    {
-      q: "Saya pemula banget, belum pernah jualan. Masih bisa ikut?",
-      a: "Sangat bisa. Ekosistem ini memang dibuat agar pemula punya sistem jualan rapi sejak awal. Ada panduan step-by-step, video, dan grup WA yang bantu kamu dari nol.",
-    },
-    {
-      q: "Kalau saya sudah jualan brand lain, boleh gabung Lamonte juga?",
-      a: "Boleh. Banyak mitra yang menambah Lamonte sebagai lini premium. Kami bantu atur positioning supaya jualanmu tidak saling tabrakan.",
-    },
-    {
-      q: "Apakah ada garansi kalau saya nggak bisa jualan?",
-      a: "Kami tidak janji kaya mendadak. Kami siapkan sistem, materi, dan pendampingan. Tugasmu hadir di kelas, praktik, dan konsisten. Kalau kamu niat belajar dan mau ikut arahan, peluang berhasil jauh lebih besar.",
-    },
-  ];
+  {
+    q: "Saya benar-benar baru, belum pernah jualan. Masih cocok ikut?",
+    a: "Justru itu yang paling banyak gabung. Sistem kemitraan ini dirancang supaya kamu nggak mulai dengan tebak-tebakan. Ada panduan jelas, materi siap pakai, dan arahan yang bisa langsung dipraktikkan.",
+  },
+  {
+    q: "Kalau saya sudah jualan produk lain, masih relevan gabung?",
+    a: "Sangat relevan. Banyak mitra menjadikan Lamonte sebagai lini yang lebih stabil & lebih mudah diposisikan. Produk tetap jalan tanpa harus bentrok dengan jualan utama kamu.",
+  },
+  {
+    q: "Ada jaminan pasti laku?",
+    a: "Tidak ada bisnis yang bisa menjanjikan hasil instan. Yang kami siapkan adalah produk yang sudah terbukti jalan, sistem yang rapi, dan pola jualan yang lebih terarah. Eksekusi tetap di tangan kamu.",
+  },
+];
 
   return (
-    <section id="faq" className="relative py-32 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section id="faq" className="relative py-14 md:py-20 bg-gradient-to-b from-amber-50 via-white to-white  overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-30" />
       {/* subtle background glow */}
       <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-green-200 rounded-full blur-[150px] opacity-20"></div>
       <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-yellow-200 rounded-full blur-[150px] opacity-20"></div>
@@ -29,10 +30,11 @@ export const Faq = () => {
       <div className="relative max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">
+        
           <h2 className="text-4xl font-bold text-gray-900 mb-5 tracking-tight">
             Pertanyaan yang Sering Ditanyakan Calon Mitra
           </h2>
-          <div className="h-[2px] w-20 mx-auto bg-gradient-to-r from-green-600 to-yellow-500 rounded-full"></div>
+          <div className="h-[2px] w-20 mx-auto bg-primery rounded-full"></div>
         </div>
 
         {/* FAQ List */}
@@ -40,7 +42,7 @@ export const Faq = () => {
           {faqs.map((item, i) => (
             <div
               key={i}
-              className={`group rounded-3xl border transition-all duration-500 shadow-sm hover:shadow-xl
+              className={`  group rounded-3xl border transition-all duration-500 shadow-sm hover:shadow-xl
               ${
                 open === i
                   ? "bg-green-50 border-green-200"
@@ -49,7 +51,7 @@ export const Faq = () => {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex justify-between items-center p-6 text-left"
+                className="w-full flex justify-between items-center p-6 text-left cursor-pointer"
               >
                 <span className="font-semibold text-gray-900">{item.q}</span>
 
@@ -78,9 +80,9 @@ export const Faq = () => {
                 type: "faq",
               })
             }
-            className="px-8 py-3 rounded-full bg-gradient-to-r from-green-600 to-green-500 text-white font-semibold shadow-lg hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer"
+            className="px-8 py-3 rounded-full bg-primery text-white font-semibold shadow-lg hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer"
           >
-            Masih Ada yang Mengganjal? Tanya Admin Sekarang
+            Masih Ada Pertanyaan? Konsultasi Langsung
           </button>
         </div>
       </div>

@@ -1,157 +1,234 @@
 import React from "react";
 import { redirectToWhatsApp } from "./Redirec";
+import paket1 from "../assets/paket1.jpg";
+import paket2 from "../assets/paket2.jpg";
+import paket3 from "../assets/paket3.jpg";
+import paket4 from "../assets/paket4.jpg";
+import paket5 from "../assets/paket5.jpg";
 
 export const PaketKemitraan = () => {
+  const slides = [
+    {
+      badge: "Starter",
+      title: "Paket Mulai Aman",
+      price: "Rp 650.000",
+      desc: "Cocok untuk yang mau mulai tanpa tekanan stok besar.",
+      features: [
+        "Produk siap jual",
+        "Campur ukuran & model",
+        "Panduan jualan dasar",
+        "Bisa langsung jalan",
+      ],
+      image: paket1,
+      color: {
+        bg: "bg-blue-50",
+        text: "text-blue-600",
+        glow: "bg-blue-500",
+      },
+    },
+
+    {
+      badge: "Growth",
+      title: "Paket Jualan Serius",
+      price: "Rp 850.000",
+      desc: "Untuk yang ingin ritme jualan lebih stabil & variatif.",
+      features: [
+        "Stok lebih variatif",
+        "Mix model favorit",
+        "Lebih fleksibel jualan",
+        "Margin lebih enak",
+      ],
+      image: paket2,
+      color: {
+        bg: "bg-green-50",
+        text: "text-green-600",
+        glow: "bg-green-500",
+      },
+    },
+
+    {
+      badge: "Best Value",
+      title: "Paket Usaha Stabil",
+      price: "Rp 1.000.000",
+      desc: "Pilihan ideal untuk yang ingin fokus bangun alur bisnis.",
+      features: [
+        "Komposisi stok lebih matang",
+        "Lebih siap scaling",
+        "Lebih aman main harga",
+        "Lebih nyaman jualan",
+      ],
+      image: paket3,
+      color: {
+        bg: "bg-amber-50",
+        text: "text-amber-600",
+        glow: "bg-amber-500",
+      },
+    },
+
+    {
+      badge: "Serius Bangun Brand",
+      title: "Paket Level Up",
+      price: "Rp 1.200.000",
+      desc: "Untuk yang ingin usaha terlihat lebih proper & rapi.",
+      features: [
+        "Varian lebih kuat",
+        "Lebih mudah bikin promo",
+        "Lebih menarik di konten",
+        "Lebih siap main volume",
+      ],
+      image: paket4,
+      color: {
+        bg: "bg-purple-50",
+        text: "text-purple-600",
+        glow: "bg-purple-500",
+      },
+    },
+    {
+      badge: "High Tier",
+      title: "Paket Skala Serius",
+      price: "Rp 1.500.000",
+      desc: "Untuk yang ingin stok lebih siap, lebih leluasa main volume & promo.",
+      features: [
+        "Komposisi stok lebih agresif",
+        "Lebih kuat main bundling",
+        "Lebih fleksibel strategi harga",
+        "Lebih siap dorong omset",
+      ],
+      image: paket5,
+      color: {
+        bg: "bg-rose-50",
+        text: "text-rose-600",
+        glow: "bg-rose-500",
+      },
+    },
+  ];
   return (
     <>
-      <section id="paket-kemitraan" className="relative py-32 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
-        {/* <!-- subtle noise overlay --{">"} */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.03] mix-blend-multiply"
-          style={{
-            backgroundImage:
-              "url('https://grainy-gradients.vercel.app/noise.svg')",
-          }}
-        ></div>
-        {/* 
-  <!-- background glow --> */}
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-green-300 rounded-full blur-[200px] opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-yellow-200 rounded-full blur-[200px] opacity-20 animate-pulse"></div>
-
-        <div className="relative max-w-7xl mx-auto px-6">
-          {/* <!-- Header --> */}
-          <div className="text-center max-w-2xl mx-auto mb-24">
-            <h2 className="text-4xl font-bold text-gray-900 mb-5 tracking-tight">
-              Pilih Jalur Kemitraan Sesuai Kondisi Kamu
+      <section id="paket-kemitraan" className="relative py-14 md:py-20 bg-gradient-to-b from-amber-50 via-white to-white">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-30" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {/* Headline */}
+          <div className="text-center mb-8">
+            <span className="inline-block px-4 py-2 text-[11px] font-semibold rounded-full mb-4 text-amber-700 bg-amber-100">
+              PAKET KEMITRAAN
+            </span>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+              Bangun Bisnis Fashion Tanpa Tebak-Tebakan
             </h2>
-            <div className="h-[2px] w-20 mx-auto bg-gradient-to-r from-green-600 to-yellow-500 rounded-full mb-6"></div>
-            <p className="text-lg text-gray-600">
-              Mulai dari paket hemat sampai skala distribusi serius.
+
+            <p className="text-sm text-gray-600 max-w-md mx-auto">
+              Sistem, strategi, dan pendampingan yang bantu usaha kamu jalan
+              lebih rapi & terarah.
             </p>
           </div>
-
-          {/* <!-- Pricing Grid --> */}
-          <div className="grid lg:grid-cols-3 gap-12 items-stretch">
-            {/* 
-      <!-- CARD 1 --> */}
-            <div className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-gray-200 to-transparent transition-all duration-500 hover:scale-[1.02]">
-              <div className="relative bg-white rounded-3xl p-10 border border-gray-100 shadow-sm group-hover:shadow-2xl transition-all duration-500 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-5">
-                    Paket Sampel Murmer
-                  </h3>
-
-                  <div className="mb-7">
-                    <span className="text-4xl font-bold text-gray-900 group-hover:text-green-600 transition">
-                      Rp 650.000
-                    </span>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Cocok untuk mulai tanpa risiko besar
-                    </p>
-                  </div>
-
-                  <ul className="space-y-3 text-gray-600">
-                    <li>✔ 25 pcs campur ukuran</li>
-                    <li>✔ Stock ringan, aman untuk mulai</li>
-                    <li>✔ Cocok untuk pemula</li>
-                  </ul>
-                </div>
-
-                <button
-                  onClick={() =>
-                    redirectToWhatsApp({
-                      phone: "628111189921",
-                      type: "paket",
-                      data: { paket: "Paket Sampel Murmer" },
-                    })
-                  }
-                  className="mt-10 w-full py-3 rounded-full border border-gray-300 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 cursor-pointer"
+          <div
+            className="
+            flex gap-4 md:gap-6 overflow-x-auto pb-4
+            snap-x snap-mandatory scroll-smooth
+            [-ms-overflow-style:none] [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden"
+          >
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className="
+                snap-start shrink-0
+                w-[70%] sm:w-[50%] md:w-[40%] lg:w-[320px]"
+              >
+                <div
+                  className="
+                  bg-white rounded-3xl overflow-hidden
+                  border border-[rgba(0,0,0,0.05)]
+                  shadow-[0_15px_40px_rgba(0,0,0,0.06)]
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]
+                  relative"
                 >
-                  Pilih Paket
-                </button>
-              </div>
-            </div>
+                  {/* ✅ Ambient Shape (Halus Banget) */}
+                  <div
+                    className={`absolute -top-16 -right-16 w-32 h-32 rounded-full blur-3xl opacity-10 ${slide.color.glow}`}
+                  />
 
-            {/* <!-- CARD 2 HIGHLIGHT --> */}
-            <div className="group relative scale-105 rounded-3xl p-[1px] bg-gradient-to-br from-green-500 via-green-300 to-transparent transition-all duration-500 hover:scale-[1.07]">
-              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-10 border border-white/60 shadow-2xl flex flex-col justify-between transition-all duration-500">
-                {/* <!-- badge --> */}
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-600 to-green-500 text-white text-xs font-semibold px-5 py-2 rounded-full shadow-lg animate-[float_4s_ease-in-out_infinite]">
-                  Paling Dipilih Mitra
-                </span>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-white to-transparent opacity-40" />
 
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-5">
-                    Paket Mix Sampel
-                  </h3>
+                  {/* Image */}
+                  <div className="relative">
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full aspect-[4/3] object-cover"
+                    />
 
-                  <div className="mb-7">
-                    <span className="text-4xl font-bold bg-gradient-to-r from-green-600 to-yellow-500 bg-clip-text text-transparent">
-                      Rp 850.000
-                    </span>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Kombinasi best seller & margin stabil
-                    </p>
+                    <div
+                      className={`absolute inset-0 opacity-10 ${slide.color.glow}`}
+                    />
                   </div>
 
-                  <ul className="space-y-3 text-gray-600">
-                    <li>✔ 30 pcs mix import lokal</li>
-                    <li>✔ Variasi lebih lengkap</li>
-                    <li>✔ Cocok untuk scaling awal</li>
-                  </ul>
-                </div>
-
-                <button
-                  onClick={() =>
-                    redirectToWhatsApp({
-                      phone: "628111189921",
-                      type: "paket",
-                      data: { paket: "Paket Mix Sampel" },
-                    })
-                  }
-                  className="mt-10 w-full py-3 rounded-full bg-gradient-to-r from-green-600 to-green-500 text-white font-semibold shadow-lg hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer"
-                >
-                  Pilih Paket Ini
-                </button>
-              </div>
-            </div>
-
-            {/* <!-- CARD 3 --> */}
-            <div className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-gray-200 to-transparent transition-all duration-500 hover:scale-[1.02]">
-              <div className="relative bg-white rounded-3xl p-10 border border-gray-100 shadow-sm group-hover:shadow-2xl transition-all duration-500 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-5">
-                    Paket Usaha Mix Fashion
-                  </h3>
-
-                  <div className="mb-7">
-                    <span className="text-4xl font-bold text-gray-900 group-hover:text-green-600 transition">
-                      Rp 1.000.000
+                  {/* Content */}
+                  <div className="p-5">
+                    {/* Badge */}
+                    <span
+                      className={`inline-block text-[10px] font-semibold px-3 py-1 rounded-full mb-2 ${slide.color.text} ${slide.color.bg}`}
+                    >
+                      {slide.badge}
                     </span>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Untuk mitra yang ingin naik kelas
+
+                    {/* Title */}
+                    <h3 className="text-xs sm:text-sm font-semibold text-gray-900">
+                      {slide.title}
+                    </h3>
+
+                    {/* Price */}
+                    <div className="mt-2 text-sm sm:text-lg font-bold text-gray-900">
+                      {slide.price}
+                    </div>
+
+                    {/* Desc */}
+                    <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+                      {slide.desc}
                     </p>
+
+                    {/* Features */}
+                    <ul className="mt-3 space-y-1 ">
+                      {slide.features.map((item, i) => (
+                        <li
+                          key={i}
+                          className="text-xs text-gray-700 flex items-start gap-2"
+                        >
+                          <span
+                            className={`w-1.5 h-1.5 rounded-full mt-1.5 ${slide.color.glow}`}
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Button */}
+                    <button
+                      onClick={() =>
+                        redirectToWhatsApp({
+                          phone: "628111189921",
+                          type: "paket",
+                          data : {
+                            paket: slide.title
+                          },
+                        })
+                      }
+                      className=" cursor-pointer
+                      mt-4 w-full py-2.5 rounded-xl
+                      bg-gradient-to-r from-[#FFC83D] via-[#FFB800] to-[#F59E0B]
+                      text-white text-xs font-semibold
+                      shadow-[0_8px_20px_rgba(255,184,0,0.35)]
+                      transition-all duration-300
+                      hover:scale-[1.02]"
+                    >
+                      Pilih Paket Ini
+                    </button>
                   </div>
-
-                  <ul className="space-y-3 text-gray-600">
-                    <li>✔ 36 pcs mix fashion</li>
-                    <li>✔ Support konten</li>
-                    <li>✔ Siap jualan marketplace</li>
-                  </ul>
                 </div>
-
-                <button onClick={() =>
-                    redirectToWhatsApp({
-                      phone: "628111189921",
-                      type: "paket",
-                      data: { paket: "Paket Usaha Mix Fashion" },
-                    })
-                  } 
-                className="mt-10 w-full py-3 rounded-full border border-gray-300 font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 cursor-pointer">
-                  Pilih Paket
-                </button>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

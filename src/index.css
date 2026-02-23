@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  --font-inter: 'Inter', 'sans-serif';
+  --color-primery: #FFC83D;
+  --color-secondery: #F39C12;
+  --color-tersier: #4CAF50;
+
+}
+
+body {
+  @apply font-inter;
+}
+
 @keyframes fadeIn {
   from { background-color: rgba(0,0,0,0); backdrop-filter: blur(0px); }
   to { background-color: rgba(0,0,0,0.8); backdrop-filter: blur(6px); }
