@@ -21,7 +21,7 @@ export const Faq = () => {
 ];
 
   return (
-    <section id="faq" className="relative py-14 md:py-20 bg-gradient-to-b from-amber-50 via-white to-white  overflow-hidden">
+    <section id="faq" className="relative pb-28 py-14 md:py-20 bg-gradient-to-b from-amber-50 via-white to-white  overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-30" />
       {/* subtle background glow */}
       <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-green-200 rounded-full blur-[150px] opacity-20"></div>
@@ -72,7 +72,7 @@ export const Faq = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 ">
           <button
             onClick={() =>
               redirectToWhatsApp({
