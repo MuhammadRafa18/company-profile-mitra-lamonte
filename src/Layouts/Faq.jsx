@@ -62,8 +62,8 @@ export const Faq = () => {
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-500
-                ${open === i ? "max-h-40 px-6 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
+                className={`overflow-hidden transition-all duration-500 text-sm sm:text-base
+                ${open === i ? "max-h-40 px-6  pb-6 opacity-100" : "max-h-0 opacity-0"}`}
               >
                 <p className="text-gray-600 leading-relaxed">{item.a}</p>
               </div>
