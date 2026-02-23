@@ -6,7 +6,7 @@ export const StickyCTA = () => {
     <>
       <div className="fixed bottom-5 left-1/2 -translate-x-1/2 w-[92%] max-w-xl z-50">
         <div className="backdrop-blur-xl bg-white/85 shadow-2xl rounded-full px-4 py-3 flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-800 pl-3">
+          <span className="text-xs sm:text-sm font-medium text-gray-800 pl-3">
             Bangun Bisnis Fashion Anak Bersama Kami
           </span>
 
@@ -17,7 +17,7 @@ export const StickyCTA = () => {
                 type: "mitra",
               })
             }
-            className="bg-[#FFC83D] cursor-pointer text-black px-6 py-3 rounded-full font-semibold hover:brightness-95 active:scale-95 transition text-white"
+            className="bg-[#FFC83D] text-xs sm:text-sm cursor-pointer text-black px-6 py-3 rounded-full font-semibold hover:brightness-95 active:scale-95 transition text-white"
           >
             Mulai Jadi Mitra
           </button>
